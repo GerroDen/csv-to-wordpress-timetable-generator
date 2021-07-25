@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 const { csvToWordPressTimetable } = require("./csv-to-wordpress-timetable");
 const fs = require("fs").promises;
 
