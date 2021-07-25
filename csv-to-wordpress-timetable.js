@@ -2,40 +2,116 @@ const fs = require("fs")
 const csvParser = require("csv-parser")
 const { create } = require("xmlbuilder2")
 const { groupBy } = require("lodash")
+const { convert } = require("xmlbuilder2")
 
-const weekdaysCsv = [
-    "Montags",
-    "Dienstags",
-    "Mittwochs",
-    "Donnerstags",
-    "Freitags",
-    "Samstags",
-    "Sonntags",
-]
-const weekdaysWordPress = [
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday",
-    "saturday",
-    "sunday",
-]
+class CsvAccessor {
+    constructor(csv) {
+        this.csv = csv
+    }
 
-async function csvToWordPressTimetable(csvFile) {
-    const csv = await parseCsv(csvFile)
+    static async parse(csvFile) {
+        const csv = await parseCsv(csvFile)
+        return new CsvAccessor(csv)
+    }
+
+    get angebotMap() {
+        return groupBy(this.csv, entry => entry.Angebot)
+    }
+
+    get angebote() {
+        return Object.keys(this.angebotMap)
+    }
+
+    get length() {
+        return this.csv.length
+    }
+
+    [Symbol.iterator]() { 
+        return this.csv.values() 
+    }
+
+    static weekdays = [
+        "Montags",
+        "Dienstags",
+        "Mittwochs",
+        "Donnerstags",
+        "Freitags",
+        "Samstags",
+        "Sonntags",
+    ]
+}
+
+class XmlAccessor {
+    constructor(xml) {
+        this.xml = xml
+    }
+
+    static async parse(xmlFile) {
+        const xmlString = await fs.promises.readFile(xmlFile, { encoding: "utf8" })
+        const xml = convert(xmlString, { format: "object" })
+        return new XmlAccessor(xml)
+    }
+
+    get items() {
+        return this.xml.rss.channel.item
+    }
+
+    get timeslots() {
+        return this.xml.rss.channel.timeslot
+    }
+
+    get weekdayItems() {
+        return this.items.filter(item => item["wp:postmeta"].some(meta => meta["wp:meta_key"]["$"] === "column_option" && meta["wp:meta_value"]["$"] === "weekday"))
+    }
+
+    get weekdayItemMap() {
+        return groupBy(
+            this.weekdayItems,
+            item => item["wp:postmeta"].find(meta => meta["wp:meta_key"]["$"] === "weekday")["wp:meta_value"]["$"]
+        )
+    }
+
+    get weekdays() {
+        return Object.keys(this.weekdayItemMap)
+    }
+
+    get angebotItems() {
+        return this.items.filter(item => item["wp:post_type"]["$"] === "mp-event")
+    }
+
+    get angebotItemMap() {
+        return groupBy(this.angebotItems, item => item.title)
+    }
+
+    get angebote() {
+        return Object.keys(this.angebotItemMap)
+    }
+
+    static weekdays = [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+    ]
+}
+
+async function csvToWordPressTimetable({ csvFile, xmlFile }) {
+    const csv = await CsvAccessor.parse(csvFile)
     console.info(`finished loading CSV with ${csv.length} lines`)
-    const angebote = Object.keys(groupBy(csv, entry => entry.Angebot))
+    const xml = await XmlAccessor.parse(xmlFile)
+    console.info(`loaded base timetable from XML with ${xml.timeslots.length} timeslots`)
+    const removedAngebote = xml.angebote.filter(xmlAngebot => !csv.angebote.includes(xmlAngebot))
+    const addedAngebote = csv.angebote.filter(csvAngebot => !xml.angebote.includes(csvAngebot))
+    const removedTimeslots = ""
+    const addedTimeslots = ""
+    // console.log(Object.keys(weekdayItemIndex))
+    // console.log(Object.keys(angebotItemIndex))
+    /*
     const xml = {
         "rss": {
-            "@": {
-                "version": "2.0",
-                "xmlns:excerpt": "http://wordpress.org/export/1.2/excerpt/",
-                "xmlns:content": "http://purl.org/rss/1.0/modules/content/",
-                "xmlns:wfw": "http://wellformedweb.org/CommentAPI/",
-                "xmlns:dc": "http://purl.org/dc/elements/1.1/",
-                "xmlns:wp": "http://wordpress.org/export/1.2/",
-            },
             "channel": {
                 "item": [
                     ...weekdaysCsv.map((weekday, index) => ({
@@ -77,7 +153,8 @@ async function csvToWordPressTimetable(csvFile) {
                 })),
             },
         },
-    };
+    }
+    */
     return create({ version: "1.0", encoding: "UTF-8" })
         .ele(xml)
         .end({ prettyPrint: true })

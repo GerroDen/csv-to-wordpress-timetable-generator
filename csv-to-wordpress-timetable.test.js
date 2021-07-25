@@ -11,8 +11,8 @@ describe("csvToWordPressTimetable", () => {
     it("converts csv to wordpress timetable", async () => {
         const xml = await fs.readFile(xmlFile, { encoding: "utf8" });
 
-        const result = await csvToWordPressTimetable(csvFile);
+        const result = await csvToWordPressTimetable({ csvFile, xmlFile });
 
-        expect(convert(result, {format: "object"})).toBe(convert(xml, {format: "object"}));
+        expect(result).toMatchSnapshot();
     });
 });
