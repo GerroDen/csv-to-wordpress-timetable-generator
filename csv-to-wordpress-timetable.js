@@ -50,14 +50,11 @@ class CsvLineAccessor {
 
     get timeslot() {
         const parts = this.Uhrzeit.split("-")
+        if (parts.length !== 2) return undefined
         return {
             start: parts[0]?.trim(),
             end: parts[1]?.trim(),
         }
-    }
-
-    get timeslotComplete() {
-        return this.timeslot.start !== undefined && this.timeslot.end !== undefined
     }
 }
 
@@ -110,6 +107,16 @@ class XmlAccessor {
         return Object.keys(this.angebotItemMap)
     }
 
+    /**
+     * @param {string} angebot
+     * @returns string
+     */
+    getAngebotId(angebot) {
+        const angebotItem = this.angebotItemMap[angebot]
+        if (angebotItem) return angebotItem["wp:post_id"]
+        return undefined
+    }
+
     static weekdays = [
         "monday",
         "tuesday",
@@ -136,8 +143,8 @@ class XmlToCsv {
     generate() {
         const xml = this.generateBaseXml()
         xml.rss.channel.item.push(...cloneDeep(this.xml.weekdayItems))
-        xml.rss.channel.item.push(...this.csv.data.map(this.generateAngebot.bind(this)))
-        xml.rss.channel.timeslot.push(...this.csv.data.filter(line => line.timeslotComplete).map(this.generateTimeslot.bind(this)))
+        xml.rss.channel.item.push(...this.csv.angebote.map(this.generateAngebot.bind(this)))
+        xml.rss.channel.timeslot.push(...this.csv.data.filter(line => line.timeslot !== undefined).map(this.generateTimeslot.bind(this)))
         const removedAngebote = this.xml.angebote.filter(xmlAngebot => !this.csv.angebote.includes(xmlAngebot))
         if (removedAngebote.length > 0) console.info(`removed angebote ${removedAngebote}`)
         const addedAngebote = this.csv.angebote.filter(csvAngebot => !this.xml.angebote.includes(csvAngebot))
@@ -154,28 +161,28 @@ class XmlToCsv {
     }
 
     /**
-     * @param {CsvLineAccessor} csvLine
+     * @param {string} csvLine
      * @param {number} index
      */
-    generateAngebot(csvLine, index) {
+    generateAngebot(angebot, index) {
         return {
             ...cloneDeep(this.xml.angebotItems[0]),
-            "title": csvLine.Angebot,
-            "wp:post_id": this.xml.angebotItemMap[csvLine.Angebot]["wp:post_id"] ?? 100 + index,
-            "wp:post_name": { "$": csvLine.Angebot.toLowerCase().replace(/\s+/g, "-") },
+            "title": angebot,
+            "wp:post_id": this.xml.getAngebotId(angebot) ?? 100 + index,
+            "wp:post_name": { "$": angebot.toLowerCase().replace(/\s+/g, "-") },
         };
     }
 
     /**
      * @param {CsvLineAccessor} csvLine
-     * @param {number} index
      */
-    generateTimeslot(csvLine, index) {
+    generateTimeslot(csvLine) {
         const xmlWeekday = this.weekdaysCsvToXml[csvLine.Wochentag];
+        const angebotIndex = this.csv.angebote.findIndex(angebot => angebot === csvLine.Angebot)
         return {
             ...cloneDeep(this.xml.timeslots[0]),
             "column": { "$": this.xml.weekdayItemMap[xmlWeekday]["wp:post_id"] },
-            "event": { "$": this.xml.angebotItemMap[csvLine.Angebot]["wp:post_id"] ?? 100 + index },
+            "event": { "$": this.xml.getAngebotId(csvLine.Angebot) ?? 100 + angebotIndex },
             "event_start": { "$": csvLine.timeslot.start + ":00" },
             "event_end": { "$": csvLine.timeslot.end + ":00" },
             "description": { "$": csvLine.Alter },
