@@ -280,7 +280,331 @@ exports[`csvToWordPressTimetable converts csv to wordpress timetable 1`] = `
       <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
       <wp:comment_status><![CDATA[open]]></wp:comment_status>
       <wp:ping_status><![CDATA[closed]]></wp:ping_status>
-      <wp:post_name><![CDATA[uebungsplan]]></wp:post_name>
+      <wp:post_name><![CDATA[karate]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Karate</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3032</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[karate]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Karate</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3032</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[karate]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Karate</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3032</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[karate]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Karate</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3032</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[karate]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Karate</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3032</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[karate]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Karate</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3032</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[karate]]></wp:post_name>
       <wp:status><![CDATA[publish]]></wp:status>
       <wp:post_parent>0</wp:post_parent>
       <wp:menu_order>0</wp:menu_order>
@@ -322,16 +646,16 @@ exports[`csvToWordPressTimetable converts csv to wordpress timetable 1`] = `
     </item>
     <item>
       <title>Tischtennis</title>
-      <link>https://test.eintracht-wiesbaden.de/timetable/event/tischtennis/</link>
-      <pubDate>Sun, 11 Jul 2021 19:05:49 +0000</pubDate>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
       <dc:creator><![CDATA[admin]]></dc:creator>
-      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3052</guid>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
       <description/>
       <content:encoded/>
       <excerpt:encoded/>
       <wp:post_id>3052</wp:post_id>
-      <wp:post_date><![CDATA[2021-07-11 21:05:49]]></wp:post_date>
-      <wp:post_date_gmt><![CDATA[2021-07-11 19:05:49]]></wp:post_date_gmt>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
       <wp:comment_status><![CDATA[open]]></wp:comment_status>
       <wp:ping_status><![CDATA[closed]]></wp:ping_status>
       <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
@@ -351,7 +675,7 @@ exports[`csvToWordPressTimetable converts csv to wordpress timetable 1`] = `
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[color]]></wp:meta_key>
-        <wp:meta_value><![CDATA[rgb(162, 196, 201)]]></wp:meta_value>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
@@ -371,144 +695,544 @@ exports[`csvToWordPressTimetable converts csv to wordpress timetable 1`] = `
       </wp:postmeta>
       <wp:postmeta>
         <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
-        <wp:meta_value><![CDATA[0]]></wp:meta_value>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Tischtennis</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3052</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Tischtennis</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3052</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Tischtennis</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3052</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Tischtennis</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3052</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Tischtennis</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3052</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Tischtennis</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3052</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Tischtennis</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3052</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+    </item>
+    <item>
+      <title>Tischtennis</title>
+      <link>https://test.eintracht-wiesbaden.de/timetable/event/uebungsplan/</link>
+      <pubDate>Sun, 11 Jul 2021 18:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[admin]]></dc:creator>
+      <guid isPermaLink=\\"false\\">https://test.eintracht-wiesbaden.de/?post_type=mp-event&amp;amp;#038;p=3032</guid>
+      <description/>
+      <content:encoded/>
+      <excerpt:encoded/>
+      <wp:post_id>3052</wp:post_id>
+      <wp:post_date><![CDATA[2021-07-11 20:38:22]]></wp:post_date>
+      <wp:post_date_gmt><![CDATA[2021-07-11 18:38:22]]></wp:post_date_gmt>
+      <wp:comment_status><![CDATA[open]]></wp:comment_status>
+      <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+      <wp:post_name><![CDATA[tischtennis]]></wp:post_name>
+      <wp:status><![CDATA[publish]]></wp:status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:post_type><![CDATA[mp-event]]></wp:post_type>
+      <wp:post_password/>
+      <wp:is_sticky>0</wp:is_sticky>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[sub_title]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[color]]></wp:meta_key>
+        <wp:meta_value><![CDATA[rgb(241, 194, 50)]]></wp:meta_value>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[hover_text_color]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_custom_url]]></wp:meta_key>
+        <wp:meta_value/>
+      </wp:postmeta>
+      <wp:postmeta>
+        <wp:meta_key><![CDATA[timetable_disable_url]]></wp:meta_key>
+        <wp:meta_value><![CDATA[1]]></wp:meta_value>
       </wp:postmeta>
     </item>
     <timeslot>
-      <column><![CDATA[0]]></column>
+      <column><![CDATA[3033]]></column>
       <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[17:30:00]]></event_start>
-      <event_end><![CDATA[18:45:00]]></event_end>
+      <event_start><![CDATA[17:45:00]]></event_start>
+      <event_end><![CDATA[19:15:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description/>
+      <description><![CDATA[Erwachsene]]></description>
     </timeslot>
     <timeslot>
-      <column><![CDATA[0]]></column>
+      <column><![CDATA[3034]]></column>
       <event><![CDATA[3032]]></event>
       <event_start><![CDATA[20:00:00]]></event_start>
       <event_end><![CDATA[22:00:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description/>
+      <description><![CDATA[Erwachsene]]></description>
     </timeslot>
     <timeslot>
-      <column><![CDATA[0]]></column>
+      <column><![CDATA[3037]]></column>
       <event><![CDATA[3032]]></event>
       <event_start><![CDATA[20:00:00]]></event_start>
       <event_end><![CDATA[22:00:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description/>
+      <description><![CDATA[Erwachsene]]></description>
     </timeslot>
     <timeslot>
-      <column><![CDATA[0]]></column>
+      <column><![CDATA[3034]]></column>
       <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[20:00:00]]></event_start>
-      <event_end><![CDATA[22:00:00]]></event_end>
+      <event_start><![CDATA[17:15:00]]></event_start>
+      <event_end><![CDATA[18:15:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description/>
+      <description><![CDATA[Jugendliche]]></description>
+    </timeslot>
+    <timeslot>
+      <column><![CDATA[3037]]></column>
+      <event><![CDATA[3032]]></event>
+      <event_start><![CDATA[17:15:00]]></event_start>
+      <event_end><![CDATA[18:15:00]]></event_end>
+      <user_id><![CDATA[-1]]></user_id>
+      <description><![CDATA[Jugendliche]]></description>
+    </timeslot>
+    <timeslot>
+      <column><![CDATA[3034]]></column>
+      <event><![CDATA[3032]]></event>
+      <event_start><![CDATA[16:00:00]]></event_start>
+      <event_end><![CDATA[17:00:00]]></event_end>
+      <user_id><![CDATA[-1]]></user_id>
+      <description><![CDATA[Kinder]]></description>
+    </timeslot>
+    <timeslot>
+      <column><![CDATA[3037]]></column>
+      <event><![CDATA[3032]]></event>
+      <event_start><![CDATA[16:00:00]]></event_start>
+      <event_end><![CDATA[18:00:00]]></event_end>
+      <user_id><![CDATA[-1]]></user_id>
+      <description><![CDATA[Kinder]]></description>
     </timeslot>
     <timeslot>
       <column><![CDATA[3033]]></column>
-      <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[17:30:00]]></event_start>
-      <event_end><![CDATA[18:45:00]]></event_end>
+      <event><![CDATA[3052]]></event>
+      <event_start><![CDATA[18:00:00]]></event_start>
+      <event_end><![CDATA[20:00:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Kata]]></description>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3034]]></column>
-      <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[20:00:00]]></event_start>
-      <event_end><![CDATA[22:00:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Kata]]></description>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3036]]></column>
-      <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[20:00:00]]></event_start>
-      <event_end><![CDATA[22:00:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Kata]]></description>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3037]]></column>
-      <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[20:00:00]]></event_start>
-      <event_end><![CDATA[22:00:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Kata]]></description>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3034]]></column>
-      <event><![CDATA[3043]]></event>
-      <event_start><![CDATA[15:45:00]]></event_start>
-      <event_end><![CDATA[16:45:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description/>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3033]]></column>
-      <event><![CDATA[3043]]></event>
-      <event_start><![CDATA[17:00:00]]></event_start>
-      <event_end><![CDATA[18:15:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description/>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3034]]></column>
-      <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[15:45:00]]></event_start>
-      <event_end><![CDATA[16:45:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Anfänger]]></description>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3034]]></column>
-      <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[17:00:00]]></event_start>
-      <event_end><![CDATA[18:15:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Fortgeschrittene]]></description>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3037]]></column>
-      <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[15:45:00]]></event_start>
-      <event_end><![CDATA[16:45:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Anfänger]]></description>
-    </timeslot>
-    <timeslot>
-      <column><![CDATA[3037]]></column>
-      <event><![CDATA[3032]]></event>
-      <event_start><![CDATA[17:00:00]]></event_start>
-      <event_end><![CDATA[18:15:00]]></event_end>
-      <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Fortgeschrittene]]></description>
+      <description><![CDATA[Hobbygruppe]]></description>
     </timeslot>
     <timeslot>
       <column><![CDATA[3034]]></column>
       <event><![CDATA[3052]]></event>
       <event_start><![CDATA[18:00:00]]></event_start>
-      <event_end><![CDATA[20:00:00]]></event_end>
+      <event_end><![CDATA[18:45:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Jugend]]></description>
+      <description><![CDATA[Jugend-Leistungsgruppe]]></description>
     </timeslot>
     <timeslot>
       <column><![CDATA[3034]]></column>
       <event><![CDATA[3052]]></event>
       <event_start><![CDATA[20:00:00]]></event_start>
-      <event_end><![CDATA[23:00:00]]></event_end>
+      <event_end><![CDATA[22:00:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Herren]]></description>
+      <description><![CDATA[Erwachsene]]></description>
     </timeslot>
     <timeslot>
       <column><![CDATA[3035]]></column>
       <event><![CDATA[3052]]></event>
       <event_start><![CDATA[18:00:00]]></event_start>
-      <event_end><![CDATA[20:00:00]]></event_end>
+      <event_end><![CDATA[19:45:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Jugend]]></description>
+      <description><![CDATA[Kinder/Jugend]]></description>
+    </timeslot>
+    <timeslot>
+      <column><![CDATA[3035]]></column>
+      <event><![CDATA[3052]]></event>
+      <event_start><![CDATA[20:00:00]]></event_start>
+      <event_end><![CDATA[22:00:00]]></event_end>
+      <user_id><![CDATA[-1]]></user_id>
+      <description><![CDATA[Herren]]></description>
+    </timeslot>
+    <timeslot>
+      <column><![CDATA[3036]]></column>
+      <event><![CDATA[3052]]></event>
+      <event_start><![CDATA[18:00:00]]></event_start>
+      <event_end><![CDATA[22:00:00]]></event_end>
+      <user_id><![CDATA[-1]]></user_id>
+      <description><![CDATA[Herren]]></description>
     </timeslot>
     <timeslot>
       <column><![CDATA[3037]]></column>
@@ -516,15 +1240,23 @@ exports[`csvToWordPressTimetable converts csv to wordpress timetable 1`] = `
       <event_start><![CDATA[18:00:00]]></event_start>
       <event_end><![CDATA[19:30:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
-      <description><![CDATA[Jugend]]></description>
+      <description><![CDATA[Kinder/Jugend]]></description>
     </timeslot>
     <timeslot>
       <column><![CDATA[3037]]></column>
       <event><![CDATA[3052]]></event>
-      <event_start><![CDATA[19:30:00]]></event_start>
-      <event_end><![CDATA[23:00:00]]></event_end>
+      <event_start><![CDATA[19:45:00]]></event_start>
+      <event_end><![CDATA[22:00:00]]></event_end>
       <user_id><![CDATA[-1]]></user_id>
       <description><![CDATA[Herren]]></description>
+    </timeslot>
+    <timeslot>
+      <column><![CDATA[3039]]></column>
+      <event><![CDATA[3052]]></event>
+      <event_start><![CDATA[13:00:00]]></event_start>
+      <event_end><![CDATA[17:00:00]]></event_end>
+      <user_id><![CDATA[-1]]></user_id>
+      <description><![CDATA[Hobbygruppe]]></description>
     </timeslot>
   </channel>
 </rss>"
