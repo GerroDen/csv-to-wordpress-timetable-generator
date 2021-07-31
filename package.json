@@ -12,7 +12,8 @@
   "dependencies": {
     "csv-parser": "^3.0.0",
     "lodash": "^4.17.21",
-    "xmlbuilder2": "^2.4.1"
+    "xmlbuilder2": "^2.4.1",
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
     "jest": "^27.0.6"
