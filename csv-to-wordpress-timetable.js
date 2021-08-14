@@ -1,8 +1,10 @@
 const fs = require("fs")
 const csvParser = require("csv-parser")
 const { create } = require("xmlbuilder2")
-const { groupBy, cloneDeep, zipObject, chain } = require("lodash")
+const { groupBy, cloneDeep, zipObject, chain, filter } = require("lodash")
 const { convert } = require("xmlbuilder2")
+const materialColors = require("material-colors")
+const colors = require("material-colors")
 
 class CsvAccessor {
     constructor(csv) {
@@ -170,6 +172,10 @@ class XmlToCsv {
             "title": angebot,
             "wp:post_id": this.xml.getAngebotId(angebot) ?? 100 + index,
             "wp:post_name": { "$": angebot.toLowerCase().replace(/\s+/g, "-") },
+            "wp:postmeta": {
+                "wp:meta_key": { "$": "color" },
+                "wp:meta_value": { "$": XmlToCsv.colors[index % XmlToCsv.colors.length] },
+            },
         };
     }
 
@@ -188,6 +194,11 @@ class XmlToCsv {
             "description": { "$": csvLine.Alter },
         }
     }
+
+    static colors = Object.freeze([
+        ...Object.values(materialColors).filter(color => typeof colors === "object" && color.hasOwnProperty("50")).map(color => color["50"]),
+        ...Object.values(materialColors).filter(color => typeof colors === "object" && color.hasOwnProperty("300")).map(color => color["300"]),
+    ])
 }
 
 async function csvToWordPressTimetable({ csvFile, xmlFile }) {
