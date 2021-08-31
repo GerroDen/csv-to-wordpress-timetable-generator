@@ -1,7 +1,7 @@
 const fs = require("fs")
 const csvParser = require("csv-parser")
 const { create } = require("xmlbuilder2")
-const { groupBy, cloneDeep, zipObject, chain, filter } = require("lodash")
+const { groupBy, cloneDeep, zipObject, chain, castArray } = require("lodash")
 const { convert } = require("xmlbuilder2")
 const materialColors = require("material-colors")
 const colors = require("material-colors")
@@ -80,12 +80,12 @@ class XmlAccessor {
     }
 
     get weekdayItems() {
-        return this.items.filter(item => item["wp:postmeta"].some(meta => meta["wp:meta_key"]["$"] === "column_option" && meta["wp:meta_value"]["$"] === "weekday"))
+        return this.items.filter(item => castArray(item["wp:postmeta"]).some(meta => meta["wp:meta_key"]["$"] === "column_option" && meta["wp:meta_value"]["$"] === "weekday"))
     }
 
     get weekdayItemMap() {
         return chain(this.weekdayItems)
-            .groupBy(item => item["wp:postmeta"].find(meta => meta["wp:meta_key"]["$"] === "weekday")["wp:meta_value"]["$"])
+            .groupBy(item => castArray(item["wp:postmeta"]).find(meta => meta["wp:meta_key"]["$"] === "weekday")["wp:meta_value"]["$"])
             .mapValues(values => values[0])
             .value()
     }
@@ -147,11 +147,9 @@ class XmlToCsv {
         xml.rss.channel.item.push(...cloneDeep(this.xml.weekdayItems))
         xml.rss.channel.item.push(...this.csv.angebote.map(this.generateAngebot.bind(this)))
         xml.rss.channel.timeslot.push(...this.csv.data.filter(line => line.timeslot !== undefined).map(this.generateTimeslot.bind(this)))
-        const removedAngebote = this.xml.angebote.filter(xmlAngebot => !this.csv.angebote.includes(xmlAngebot))
-        if (removedAngebote.length > 0) console.info(`removed angebote ${removedAngebote}`)
-        const addedAngebote = this.csv.angebote.filter(csvAngebot => !this.xml.angebote.includes(csvAngebot))
-        if (addedAngebote.length > 0) console.info(`added angebote ${addedAngebote}`)
-        console.info(`number of timeslots changed from ${this.xml.timeslots.length} to ${new XmlAccessor(xml).timeslots.length}`)
+        const newXml = new XmlAccessor(xml)
+        console.info(`angebote are ${newXml.angebote}`)
+        console.info(`number of timeslots is ${newXml.timeslots.length}`)
         return xml
     }
 
@@ -172,10 +170,10 @@ class XmlToCsv {
             "title": angebot,
             "wp:post_id": this.xml.getAngebotId(angebot) ?? 100 + index,
             "wp:post_name": { "$": angebot.toLowerCase().replace(/\s+/g, "-") },
-            "wp:postmeta": {
+            "wp:postmeta": [{
                 "wp:meta_key": { "$": "color" },
                 "wp:meta_value": { "$": XmlToCsv.colors[index % XmlToCsv.colors.length] },
-            },
+            }],
         };
     }
 
@@ -203,9 +201,9 @@ class XmlToCsv {
 
 async function csvToWordPressTimetable({ csvFile, xmlFile }) {
     const csv = await CsvAccessor.parse(csvFile)
-    console.info(`finished loading CSV with ${csv.length} lines`)
+    console.info(`finished loading CSV with ${csv.length} lines and ${csv.angebote.length} angebote`)
     const xml = await XmlAccessor.parse(xmlFile)
-    console.info(`loaded base timetable from XML with ${xml.timeslots.length} timeslots`)
+    console.info(`loaded base timetable from XML with ${xml.timeslots.length} timeslots and ${xml.angebote.length} angebote`)
     const xmlToCsv = new XmlToCsv({ xml, csv })
     const newXml = xmlToCsv.generate()
     return create({ version: "1.0", encoding: "UTF-8" })
