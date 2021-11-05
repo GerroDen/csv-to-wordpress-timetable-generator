@@ -218,7 +218,8 @@ function parseCsv(csvFile) {
         fs.createReadStream(csvFile)
             .pipe(csvParser())
             .on("data", (data) => {
-                if (Object.values(data).some(value => !!value.trim())) {
+                const values = Object.values(data)
+                if (values.every(value => value.trim())) {
                     csv.push(Object.fromEntries(Object.entries(data).map(([key, value]) => [key, value.trim()])))
                 }
             })
