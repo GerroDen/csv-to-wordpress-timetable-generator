@@ -1,10 +1,11 @@
-const fs from"fs").promises
-const path from"path")
-const { describe, expect, it } from"@jest/globals")
-const { csvToWordPressTimetable } from"./csv-to-wordpress-timetable")
+import { dirname, resolve } from "path"
+import { fileURLToPath } from "url"
+import { describe, expect, it } from "@jest/globals"
+import { csvToWordPressTimetable } from "./csv-to-wordpress-timetable"
 
-const csvFile = path.resolve(__dirname, "__fixtures__/timetable.csv")
-const xmlFile = path.resolve(__dirname, "__fixtures__/timetable_export.xml")
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const csvFile = resolve(__dirname, "__fixtures__/timetable.csv")
+const xmlFile = resolve(__dirname, "__fixtures__/timetable_export.xml")
 
 describe("csvToWordPressTimetable", () => {
     it("converts csv to wordpress timetable", async () => {
