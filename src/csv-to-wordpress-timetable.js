@@ -5,6 +5,7 @@ import { groupBy, cloneDeep, zipObject, chain, castArray } from "lodash-es";
 import { convert } from "xmlbuilder2";
 import materialColors from "material-colors";
 import colors from "material-colors";
+import { finished } from "stream/promises";
 
 class CsvAccessor {
     constructor(csv) {
@@ -253,23 +254,25 @@ export async function csvToWordPressTimetable({ csvFile, xmlFile }) {
         .end({ prettyPrint: true });
 }
 
-function parseCsv(csvFile) {
+async function parseCsv(csvFile) {
     console.info("loading CSV");
-    return new Promise((resolve, reject) => {
-        const csv = [];
-        fs.createReadStream(csvFile)
-            .pipe(csvParser())
-            .on("data", (data) => {
-                const values = Object.values(data);
-                if (values.every((value) => value.trim())) {
-                    csv.push(
-                        Object.fromEntries(
-                            Object.entries(data).map(([key, value]) => [key, value.trim()])
-                        )
-                    );
-                }
-            })
-            .on("end", () => resolve(csv))
-            .on("error", reject);
-    });
+    const csv = [];
+    const parser = fs.createReadStream(csvFile)
+        .pipe(csvParser())
+    parser.on("readable", () => {
+        let data
+        while ((data = parser.read()) !== null) {
+            if (data.Angebot && data.Wochentag && data.Uhrzeit && data.Ort) {
+                csv.push(
+                    Object.fromEntries(
+                        Object.entries(data)
+                            .filter(([key]) => key)
+                            .map(([key, value]) => [key, value.trim()])
+                    )
+                );
+            }
+        }
+    })
+    await finished(parser)
+    return csv
 }
