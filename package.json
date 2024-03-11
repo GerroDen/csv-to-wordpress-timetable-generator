@@ -1,26 +1,26 @@
 {
-	"name": "csv-to-wordpress-timetable-generator",
-	"version": "1.0.0",
-	"description": "",
-	"type": "module",
-	"main": "index.js",
-	"bin": "index.js",
-	"scripts": {
-		"update": "node index.js --xml \"./dist/timetable_export.xml\" --csv \"./dist/Sportprogramm Eintracht Wiesbaden - Sportprogramm.csv\" --out \"dist/timetable_ew.xml\"",
-		"test": "NODE_OPTIONS=--experimental-vm-modules jest"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"csv-parser": "^3.0.0",
-		"lodash-es": "^4.17.21",
-		"material-colors": "^1.2.6",
-		"xmlbuilder2": "^3.0.2",
-		"yargs": "^17.6.2"
-	},
-	"devDependencies": {
-		"jest": "^29.3.1",
-		"prettier": "^2.8.1"
-	},
-	"private": true
+  "name": "csv-to-wordpress-timetable-generator",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "update": "node index.js --xml \"./dist/timetable_export.xml\" --csv \"./dist/Sportprogramm Eintracht Wiesbaden - Sportprogramm.csv\" --out \"dist/timetable_ew.xml\"",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "lodash-es": "^4.17.21",
+    "material-colors": "^1.2.6",
+    "xmlbuilder2": "^3.0.2",
+    "yargs": "^17.6.2"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "prettier": "^2.8.1"
+  },
+  "private": true
 }
