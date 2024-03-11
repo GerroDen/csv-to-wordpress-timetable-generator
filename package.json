@@ -6,6 +6,7 @@
 	"main": "index.js",
 	"bin": "index.js",
 	"scripts": {
+		"update": "node index.js --xml \"./dist/timetable_export.xml\" --csv \"./dist/Sportprogramm Eintracht Wiesbaden - Sportprogramm.csv\" --out \"dist/timetable_ew.xml\"",
 		"test": "NODE_OPTIONS=--experimental-vm-modules jest"
 	},
 	"author": "",
