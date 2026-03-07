@@ -12,11 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "csv-parser": "^3.0.0",
+    "csv-parser": "^3.2.0",
     "lodash-es": "^4.17.21",
     "material-colors": "^1.2.6",
-    "xmlbuilder2": "^3.0.2",
-    "yargs": "^17.6.2"
+    "xmlbuilder2": "^4.0.3",
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
     "jest": "^29.3.1",
