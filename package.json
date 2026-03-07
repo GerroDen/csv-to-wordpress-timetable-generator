@@ -10,20 +10,24 @@
   "main": "index.js",
   "scripts": {
     "update": "node index.js --xml \"./dist/timetable_export.xml\" --csv \"./dist/Sportprogramm Eintracht Wiesbaden - Sportprogramm.csv\" --out \"dist/timetable_ew.xml\"",
-    "lint": "oxlint",
+    "lint": "oxlint --type-aware",
     "fmt": "oxfmt",
     "test": "vitest"
   },
   "dependencies": {
     "csv-parser": "^3.2.0",
-    "lodash-es": "^4.17.21",
+    "es-toolkit": "^1.45.1",
+    "jsonpathly": "^3.0.0",
     "material-colors": "^1.2.6",
     "xmlbuilder2": "^4.0.3",
     "yargs": "^18.0.0"
   },
   "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
+    "@typescript/native-preview": "^7.0.0-dev.20260307.1",
     "oxfmt": "^0.36.0",
     "oxlint": "^1.51.0",
+    "oxlint-tsgolint": "^0.16.0",
     "vitest": "^4.0.18"
   },
   "packageManager": "yarn@4.13.0"
