@@ -1,8 +1,8 @@
 import { createReadStream } from "node:fs";
-import { finished, pipeline } from "node:stream/promises";
 import z, { ZodError } from "zod";
-import { parse } from "csv-parse";
+import csvParse from "csv-parser";
 import { uniq } from "es-toolkit";
+import { pipeline } from "node:stream/promises";
 
 export const csvWeekdays = [
   "Montag",
@@ -16,11 +16,11 @@ export const csvWeekdays = [
 
 export const timetableRowSchema = z.object({
   Angebot: z.string().trim(),
-  Alter: z.number(),
+  Alter: z.string(),
   Wochentag: z.enum(csvWeekdays),
   Uhrzeit: z
     .string()
-    .regex(/\d+:\d+-\d+:\d+/)
+    .regex(/\d{2}:\d{2}-\d{2}:\d{2}/)
     .transform((value) => {
       const parts = value.split("-");
       return {
@@ -49,15 +49,21 @@ export interface CsvParseResult extends RawCsvParseResult {
 }
 
 export async function parseCsv(csvFile: string): Promise<CsvParseResult> {
-  const rawData = await pipeline(createReadStream(csvFile), parse(), Array.fromAsync);
+  const rawData = await pipeline(createReadStream(csvFile), csvParse(), (data) =>
+    Array.fromAsync(data),
+  );
   const { data, errors } = rawData.reduce<RawCsvParseResult>(
-    (result, line, lineNumber) => {
+    (result, line, index) => {
+      if (Object.values(line).every((value) => value === "")) {
+        return result;
+      }
       const parseResult = timetableRowSchema.safeParse(line);
       if (parseResult.success) {
         result.data.push(parseResult.data);
       } else {
         result.errors.push({
-          line: lineNumber,
+          // index is off by 2 because it starts with 0 and does not contain the headline
+          line: index + 2,
           error: parseResult.error,
         });
       }

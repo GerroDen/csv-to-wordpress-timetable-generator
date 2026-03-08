@@ -20,13 +20,15 @@ export async function csvToWordPressTimetable(
     `finished loading CSV with ${csv.data.length} lines and ${csv.angebote.length} angebote`,
   );
   if (csv.errors.length) {
-    console.warn(
-      "Some invalid data was found in CSV.\n" +
-        csv.errors.map(({ line, error }) => `  In line ${line}: ${prettifyError(error)}\n`),
-    );
+    const errorMessages = csv.errors
+      .map(
+        ({ line, error }) => `  In line ${line}: ${prettifyError(error).replaceAll("\n", "\n  ")}`,
+      )
+      .join("\n");
+    console.warn(`Some invalid data was found in CSV:\n${errorMessages}`);
   }
   if (xmlTemplate.error) {
-    console.error(`Xml file contains errors.\n` + `  ${prettifyError(xmlTemplate.error)}`);
+    console.error(`Xml file contains errors:\n` + `${prettifyError(xmlTemplate.error)}`);
     throw new Error("aborted");
   }
   console.info(

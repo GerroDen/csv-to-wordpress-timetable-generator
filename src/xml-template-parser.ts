@@ -1,4 +1,5 @@
 import { keyBy } from "es-toolkit";
+import { readFile } from "node:fs/promises";
 import { convert } from "xmlbuilder2";
 import z, { ZodSafeParseError, ZodSafeParseSuccess } from "zod";
 
@@ -16,7 +17,7 @@ const cdataSchema = z.object({ $: z.string() });
 
 const xmlItemSchema = z.looseObject({
   title: z.string(),
-  "wp:post_id": z.number(),
+  "wp:post_id": z.coerce.number(),
   "wp:post_type": cdataSchema,
   "wp:postmeta": z
     .object({
@@ -47,8 +48,9 @@ export interface XmlTemplateParseSuccess extends ZodSafeParseSuccess<XmlTemplate
 
 export type XmlTemplateParseResult = XmlTemplateParseSuccess | ZodSafeParseError<XmlTemplate>;
 
-export function parseXmlTemplate(content: string): XmlTemplateParseResult {
-  const xmlContent = convert(content, { format: "object" });
+export async function parseXmlTemplate(xmlFile: string): Promise<XmlTemplateParseResult> {
+  const fileContent = await readFile(xmlFile, "utf8");
+  const xmlContent = convert(fileContent, { format: "object" });
   const result = xmlTemplateSchema.safeParse(xmlContent);
   if (!result.success) {
     return result;

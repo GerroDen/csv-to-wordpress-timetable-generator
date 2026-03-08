@@ -16,7 +16,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "csv-parse": "^6.1.0",
+    "csv-parser": "^3.2.0",
     "es-toolkit": "^1.45.1",
     "material-colors": "^1.2.6",
     "xmlbuilder2": "^4.0.3",

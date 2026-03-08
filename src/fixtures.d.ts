@@ -1,9 +1,9 @@
-declare module "*.csv" {
+declare module "*.csv?raw" {
   const content: string;
   export default content;
 }
 
-declare module "*.xml" {
+declare module "*.xml?raw" {
   const content: string;
   export default content;
 }

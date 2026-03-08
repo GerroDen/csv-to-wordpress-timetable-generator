@@ -3,6 +3,7 @@ import { writeFile, readFile } from "node:fs/promises";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { csvToWordPressTimetable } from "./src/csv-to-wordpress-timetable.js";
+import { alias } from "yargs";
 
 const argv = await yargs(hideBin(process.argv))
   .usage("Usage: $0 --csv [file] --xml [file] --out [file]")
@@ -12,7 +13,8 @@ const argv = await yargs(hideBin(process.argv))
       demandOption: true,
       desc: "CSV export from Google Sheet",
     },
-    xml: {
+    xmlTemplate: {
+      alias: "xml",
       string: true,
       demandOption: true,
       desc: "XML export from WordPress timetable plugin",
@@ -24,10 +26,5 @@ const argv = await yargs(hideBin(process.argv))
     },
   })
   .parse();
-const csvContent = await readFile(argv.csv, "utf8");
-const xmlTemplate = await readFile(argv.xml, "utf8");
-const outXml = await csvToWordPressTimetable({
-  csv: csvContent,
-  xmlTemplate,
-});
+const outXml = await csvToWordPressTimetable(argv);
 await writeFile(argv.out, outXml, { encoding: "utf8" });
