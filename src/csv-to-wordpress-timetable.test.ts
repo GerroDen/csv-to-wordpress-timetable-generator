@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { resolve } from "node:path";
 import { csvToWordPressTimetable } from "./csv-to-wordpress-timetable";
+import { convert } from "xmlbuilder2";
 
 describe("csvToWordPressTimetable", () => {
   it("converts csv to wordpress timetable", async () => {
@@ -9,6 +10,6 @@ describe("csvToWordPressTimetable", () => {
 
     const result = await csvToWordPressTimetable({ csv, xmlTemplate });
 
-    expect(result).toMatchSnapshot();
+    expect(convert(result, { format: "object" })).toMatchSnapshot();
   });
 });
