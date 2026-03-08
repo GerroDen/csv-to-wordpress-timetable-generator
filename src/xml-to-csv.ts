@@ -1,4 +1,4 @@
-import { cloneDeep, zipObject } from "es-toolkit";
+import { zipObject } from "es-toolkit";
 import { XmlItem, XmlTemplate, XmlTemplateParseSuccess, xmlWeekdays } from "./xml-template-parser";
 import materialColors from "material-colors";
 import { CsvParseResult, csvWeekdays, TimetableRow } from "./csv-parser";
@@ -30,7 +30,7 @@ const colors = Object.freeze([
 const weekdaysCsvToXml = zipObject(csvWeekdays, xmlWeekdays);
 
 function generateBaseXml(xmlTemplate: XmlTemplate): XmlTemplate {
-  const baseXml = cloneDeep(xmlTemplate);
+  const baseXml = structuredClone(xmlTemplate);
   baseXml.rss.channel.item = [];
   baseXml.rss.channel.timeslot = [];
   return baseXml;
@@ -41,7 +41,7 @@ function generateAngebot(
 ): (angebot: string, index: number) => XmlItem {
   return (angebot, index) => {
     return {
-      ...cloneDeep(xmlTemplate.angebote[0]),
+      ...structuredClone(xmlTemplate.angebote[0]),
       title: angebot,
       "wp:post_id": xmlTemplate.angebotItemMap[angebot]?.["wp:post_id"] ?? 100 + index,
       "wp:post_name": { $: angebot.toLowerCase().replace(/\s+/g, "-") },
@@ -65,7 +65,7 @@ function generateTimeslot(
     const xmlWeekday = weekdaysCsvToXml[csvLine.Wochentag];
     const angebotIndex = csv.angebote.findIndex((angebot) => angebot === csvLine.Angebot);
     return {
-      ...cloneDeep(xmlTemplate.data.rss.channel.timeslot[0]),
+      ...structuredClone(xmlTemplate.data.rss.channel.timeslot[0]),
       column: { $: xmlTemplate.weekdayItemMap[xmlWeekday]?.["wp:post_id"] ?? 200 + index },
       event: {
         $: xmlTemplate.angebotItemMap[csvLine.Angebot]?.["wp:post_id"] ?? 100 + angebotIndex,
