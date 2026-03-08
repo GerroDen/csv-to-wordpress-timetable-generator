@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-import { promises as fs } from "fs";
-import yargs from "yargs/yargs";
+import { writeFile, readFile } from "node:fs/promises";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 import { csvToWordPressTimetable } from "./src/csv-to-wordpress-timetable.js";
 
-const argv = yargs(process.argv.slice(2))
+const argv = await yargs(hideBin(process.argv))
   .usage("Usage: $0 --csv [file] --xml [file] --out [file]")
   .options({
     csv: {
@@ -21,9 +22,12 @@ const argv = yargs(process.argv.slice(2))
       demandOption: true,
       desc: "output file path",
     },
-  }).argv;
-const xml = await csvToWordPressTimetable({
-  csvFile: argv.csv,
-  xmlFile: argv.xml,
+  })
+  .parse();
+const csvContent = await readFile(argv.csv, "utf8");
+const xmlTemplate = await readFile(argv.xml, "utf8");
+const outXml = await csvToWordPressTimetable({
+  csv: csvContent,
+  xmlTemplate,
 });
-await fs.writeFile(argv.out, xml, { encoding: "utf8" });
+await writeFile(argv.out, outXml, { encoding: "utf8" });
