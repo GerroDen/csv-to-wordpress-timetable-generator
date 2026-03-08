@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-import { writeFile, readFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { csvToWordPressTimetable } from "./src/csv-to-wordpress-timetable.js";
-import { alias } from "yargs";
+import { csvToWordPressTimetable } from "./csv-to-wordpress-timetable";
 
 const argv = await yargs(hideBin(process.argv))
   .usage("Usage: $0 --csv [file] --xml [file] --out [file]")
