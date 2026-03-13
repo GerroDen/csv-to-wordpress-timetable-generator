@@ -1,5 +1,5 @@
 import { create } from "xmlbuilder2";
-import { parseXmlTemplate } from "./xml-template-parser";
+import { parseXmlTemplate, collectAngebote, collectWeekdays } from "./xml-template-parser";
 import { xmlToCsv } from "./xml-to-csv";
 import { parseCsv } from "./csv-parser";
 import { prettifyError } from "zod";
@@ -22,20 +22,26 @@ export async function csvToWordPressTimetable(
   if (csv.errors.length) {
     const errorMessages = csv.errors
       .map(
-        ({ line, error }) => `  In line ${line}: ${prettifyError(error).replaceAll("\n", "\n  ")}`,
+        ({ lineNumber, error }) =>
+          `  In line ${lineNumber}: ${prettifyError(error).replaceAll("\n", "\n  ")}`,
       )
       .join("\n");
     console.warn(`Some invalid data was found in CSV:\n${errorMessages}`);
   }
   if (xmlTemplate.error) {
     console.error(`Xml file contains errors:\n` + `${prettifyError(xmlTemplate.error)}`);
-    throw new Error("aborted");
+    throw new Error("invalid xml");
   }
-  console.info(
-    `loaded base timetable from XML with ${xmlTemplate.data.rss.channel.timeslot.length} timeslots and ${xmlTemplate.angebote.length} angebote`,
-  );
+  console.info(`loaded timetable from base XML`);
+  console.info(`  ${xmlTemplate.data.rss.channel.timeslot.length} timeslots`);
+  console.info(`  ${xmlTemplate.angebote.labels.length} angebote`, xmlTemplate.angebote.labels);
   const xml = xmlToCsv({ xmlTemplate, csv });
-  console.info(`angebote are`, xml.angebote);
-  console.info(`number of timeslots is ${xml.rss.channel.timeslot.length}`);
+  const angebote = collectAngebote(xml);
+  const weekdays = collectWeekdays(xml);
+  const timeslots = xml.rss.channel.timeslot;
+  console.info(`generated xml`);
+  console.info(`  ${angebote.labels.length} angebote`, angebote.labels);
+  console.info(`  ${weekdays.labels.length} weekdays`, weekdays.labels);
+  console.info(`  ${timeslots.length} timeslots`);
   return create({ version: "1.0", encoding: "UTF-8" }).ele(xml).end({ prettyPrint: true });
 }

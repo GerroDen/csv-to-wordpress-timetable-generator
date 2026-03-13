@@ -35,7 +35,8 @@ export const timetableRowSchema = z.object({
 export type TimetableRow = z.infer<typeof timetableRowSchema>;
 
 interface CsvLineError {
-  line: number;
+  line: string;
+  lineNumber: number;
   error: ZodError;
 }
 
@@ -63,7 +64,8 @@ export async function parseCsv(csvFile: string): Promise<CsvParseResult> {
       } else {
         result.errors.push({
           // index is off by 2 because it starts with 0 and does not contain the headline
-          line: index + 2,
+          line,
+          lineNumber: index + 2,
           error: parseResult.error,
         });
       }
