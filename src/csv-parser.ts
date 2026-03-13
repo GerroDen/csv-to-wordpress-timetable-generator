@@ -20,7 +20,7 @@ export const timetableRowSchema = z.object({
   Wochentag: z.enum(csvWeekdays),
   Uhrzeit: z
     .string()
-    .regex(/\d{2}:\d{2}\s*-\s*\d{2}:\d{2}/)
+    .regex(/\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}/)
     .transform((value) => {
       const parts = value.split("-");
       return {
