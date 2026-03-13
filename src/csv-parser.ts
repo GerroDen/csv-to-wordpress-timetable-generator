@@ -63,8 +63,8 @@ export async function parseCsv(csvFile: string): Promise<CsvParseResult> {
         result.data.push(parseResult.data);
       } else {
         result.errors.push({
-          // index is off by 2 because it starts with 0 and does not contain the headline
           line,
+          // index is off by 2 because it starts with 0 and does not contain the headline
           lineNumber: index + 2,
           error: parseResult.error,
         });
@@ -73,6 +73,6 @@ export async function parseCsv(csvFile: string): Promise<CsvParseResult> {
     },
     { data: [], errors: [] },
   );
-  const angebote = uniq(data.map(({ Angebot }) => Angebot));
+  const angebote = uniq(data.map(({ Angebot }) => Angebot)).toSorted();
   return { data, angebote, errors };
 }

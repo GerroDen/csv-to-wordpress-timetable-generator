@@ -16,9 +16,9 @@ export async function csvToWordPressTimetable(
     parseCsv(params.csv),
     parseXmlTemplate(params.xmlTemplate),
   ]);
-  console.info(
-    `finished loading CSV with ${csv.data.length} lines and ${csv.angebote.length} angebote`,
-  );
+  console.info(`finished loading CSV`);
+  console.info(`  ${csv.data.length} lines`);
+  console.info(`  ${csv.angebote.length} angebote`, csv.angebote);
   if (csv.errors.length) {
     const errorMessages = csv.errors
       .map(

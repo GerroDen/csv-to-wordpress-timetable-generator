@@ -27,3 +27,4 @@ const argv = await yargs(hideBin(process.argv))
   .parse();
 const outXml = await csvToWordPressTimetable(argv);
 await writeFile(argv.out, outXml, { encoding: "utf8" });
+console.info(`wrote to ${argv.out}`);
