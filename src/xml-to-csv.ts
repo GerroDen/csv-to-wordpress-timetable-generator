@@ -22,10 +22,7 @@ const paletteColors = [
   "deepOrange",
 ] as const;
 
-const colors = Object.freeze([
-  ...paletteColors.map((color) => materialColors[color][50]),
-  ...paletteColors.map((color) => materialColors[color][300]),
-]);
+const colors = Object.freeze(paletteColors.map((color) => materialColors[color][50]));
 
 const weekdaysCsvToXml = zipObject(csvWeekdays, xmlWeekdays);
 
